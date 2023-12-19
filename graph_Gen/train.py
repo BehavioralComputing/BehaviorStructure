@@ -85,7 +85,6 @@ def main():
 
     os.environ['CUDA_VISIBLE_DEVICES'] = str(CUDA)
     print('CUDA', CUDA)
-    ### running log
 
     if prog_args.dataset == 'enzymes':
         graphs= data.Graph_load_batch(min_num_nodes=10, name='ENZYMES')
@@ -108,17 +107,12 @@ def main():
     print('Number of graphs removed due to upper-limit of number of nodes: ', 
             num_graphs_raw - graphs_len)
     graphs_test = graphs[int(0.8 * graphs_len):]
-    #graphs_train = graphs[0:int(0.8*graphs_len)]
     graphs_train = graphs
 
     print('total graph num: {}, training set: {}'.format(len(graphs),len(graphs_train)))
     print('max number node: {}'.format(max_num_nodes))
 
     dataset = GraphAdjSampler(graphs_train, max_num_nodes, features=prog_args.feature_type)
-    #sample_strategy = torch.utils.data.sampler.WeightedRandomSampler(
-    #        [1.0 / len(dataset) for i in range(len(dataset))],
-    #        num_samples=prog_args.batch_size, 
-    #        replacement=False)
     dataset_loader = torch.utils.data.DataLoader(
             dataset, 
             batch_size=prog_args.batch_size, 
