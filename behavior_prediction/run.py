@@ -1,6 +1,6 @@
 import argparse
 
-import quick_start
+from recbole.quick_start import run
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
