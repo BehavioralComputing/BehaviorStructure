@@ -2,7 +2,7 @@
 # Usage
 
 Download datasets from [Crime Data] (https://catalog.data.gov/dataset/crime-data-from-2020-to-present). And put the files in `./crime_detection/data`.
-And run `data_pre_process.py` and `behavioral_space_generation.py` to generate the crime behavioral structure graph, run ``.
+And run `data_pre_process.py` and `behavioral_space_generation.py` to generate the crime behavioral structure graph.
 
 Download datasets from [ZhihuRec Data] (https://github.com/THUIR/ZhihuRec-Dataset). And put the files in `./behavior_prediction/data/zhihurec/ori`.
 Following the article "A Large-Scale Rich Context Query and Recommendation Dataset in Online Knowledge-Sharing (https://arxiv.org/pdf/2106.06467.pdf)," 
