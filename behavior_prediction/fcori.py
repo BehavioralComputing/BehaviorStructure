@@ -6,9 +6,7 @@ import json
 from tqdm import tqdm
 import math
 
-filepath='./data/zhihurec/pre/pre_inter_impression_small.csv'
-print(os.path.exists(filepath))
-print(os.getcwd())
+
 data=pd.read_csv('./data/zhihurec/ori/inter_impression_small.csv')
 
 dictcolm={
