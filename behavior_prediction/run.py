@@ -4,7 +4,7 @@ from recbole.quick_start import run
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--model", "-m", type=str, default="DeepAPF", help="name of models")
+    parser.add_argument("--model", "-m", type=str, default="NARM", help="name of models")
     parser.add_argument(
 
         "--dataset", "-d", type=str, default="zhihu_vec", help="name of datasets"
